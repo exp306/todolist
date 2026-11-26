@@ -1,0 +1,327 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TaskFlow</title>
+
+    <link
+        rel="stylesheet"
+        href="todolist.css"
+    >
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h1>TaskFlow</h1>
+                    <p>Get things done.</p>
+                </div>
+            </div>
+
+
+            <nav class="navigation">
+                <button
+                    class="nav-item active"
+                    data-page="all"
+                >
+                    <span>⌂</span>
+                    <span>Dashboard</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="active"
+                >
+                    <span>◉</span>
+                    <span>My Tasks</span>
+                </button>
+
+
+                <button
+                    class="nav-item"
+                    data-page="completed"
+                >
+                    <span>✓</span>
+                    <span>Completed</span>
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="mini-card">
+                    <span>⚡</span>
+
+                    <div>
+                        <strong>Stay productive</strong>
+                        <small>One task at a time.</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main">
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        YOUR SPACE
+                    </p>
+
+                    <h2 id="pageTitle">
+                        Dashboard
+                    </h2>
+
+                    <p
+                        id="pageDescription"
+                        class="page-description"
+                    >
+                        Organize your day and get things done.
+                    </p>
+
+                </div>
+
+
+                <div class="header-counter">
+
+                    <span id="taskCount">
+                        0
+                    </span>
+
+                    <small>
+                        active tasks
+                    </small>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 ADD TASK
+            ========================== -->
+
+            <section class="add-card">
+
+                <div class="add-header">
+
+                    <div>
+                        <p class="eyebrow">
+                            NEW TASK
+                        </p>
+
+                        <h3>
+                            What needs to be done?
+                        </h3>
+                    </div>
+
+                    <span class="add-emoji">
+                        ✦
+                    </span>
+
+                </div>
+
+
+                <div class="form">
+
+                    <div class="field task-field">
+
+                        <label for="taskInput">
+                            Task
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="e.g. Go to the gym..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="taskTime">
+                            Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="taskTime"
+                        >
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option
+                                value="medium"
+                                selected
+                            >
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="addButton"
+                        class="add-button"
+                    >
+                        <span>+</span>
+                        Add Task
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TOOLBAR
+            ========================== -->
+
+            <section class="toolbar">
+
+                <div class="filters">
+
+                    <button
+                        type="button"
+                        class="filter active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter"
+                        data-filter="active"
+                    >
+                        Active
+                    </button>
+
+                    <button
+                        type="button"
+                        class="filter"
+                        data-filter="completed"
+                    >
+                        Completed
+                    </button>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search tasks..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 TASK LIST
+            ========================== -->
+
+            <section id="taskList" class="task-list">
+            </section>
+
+
+            <!-- EMPTY STATE -->
+
+            <section
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    No tasks yet
+                </h3>
+
+                <p>
+                    Add your first task and start getting things done.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
